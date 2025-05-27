@@ -1,0 +1,4 @@
+body{background: #000;
+}
+#dog {position: absolute; width: 300px;}
+#start{position: absolute; bottom: 300px; left: 50px;}
