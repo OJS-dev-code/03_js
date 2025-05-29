@@ -74,3 +74,28 @@ h2{font-size: 18px; margin-bottom: 20px; }
     left: 0;
 }
 
+.hover{
+    background: pink;
+    padding: 30px;
+}
+
+.mouse{
+    background: greenyellow;
+    padding: 30px;
+}
+
+.mouse2{
+    background: rgb(100, 238, 162);
+    padding: 30px;
+}
+
+.focus.actives{
+    border: 3px solid rgb(81, 228, 19);
+    outline: none;
+}
+
+.clickTitle{
+    background: rgb(174, 235, 52);
+    padding: 30px;
+    margin-bottom: 5px;
+}
