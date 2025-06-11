@@ -1,0 +1,88 @@
+html {height: 100%; font-size: 10px;}
+body {
+    background: #222; 
+    color: #fff;
+}
+a {color: #fff; text-decoration: none;}
+#wrap {width: 100%; height: 100%;}
+#header {
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: gray;
+}
+
+.header-pc-menu-wrap{
+    width: 100%;
+    max-width: 1090px; /*최대 width 되기 전까지는 1090*/
+    margin: 0 auto;
+    background: skyblue;
+}
+.header-pc-menu-wrap aside{
+    margin-bottom: 1rem;
+}
+.header-pc-menu-wrap aside ul{
+    display: flex;
+    justify-content: flex-end;
+}
+.header-pc-menu-wrap aside ul li{position: relative;}
+.header-pc-menu-wrap aside ul li:not(:last-child):after{
+    content: "";
+    position: absolute;
+    top: .9rem;
+    right: 0;
+    width: 1px;
+    height: 10px;
+    background: rgba(255, 255, 255, .5)
+}
+.header-pc-menu-wrap aside ul li a{
+    font-size: 1.5rem; 
+    padding: 0.5rem 1rem;
+    display: inline-block;
+}
+.header-pc-menu-wrap aside ul li:last-child a{padding-right: 0;}
+.header-pc-menu-wrap .header-logo-nav{
+    display: flex;
+    height: 5rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-pc-menu-wrap .header-logo-nav .header-mobile-btn{display: none;}
+
+.header-pc-menu-wrap .header-logo-nav #nav ul{
+    display: flex;
+}
+.header-pc-menu-wrap .header-logo-nav #nav ul li{
+    margin-left: 1rem;
+}
+.header-pc-menu-wrap .header-logo-nav #nav ul li a{
+    font-size: 1.6rem;
+}
+.header-pc-menu-wrap .header-logo-nav #nav ul li a:hover{
+    color: rgba(255, 255, 255, .5);
+}
+
+@media screen and (max-width:1100px){
+    .header-pc-menu-wrap{
+        width: 100%;
+        padding: 1rem 2rem;
+        box-sizing: border-box;
+        background: rgb(138, 235, 135);
+    }
+    .header-pc-menu-wrap aside{
+        display: none;
+    }
+    .header-pc-menu-wrap .header-logo-nav #nav ul li{
+        display: none;
+    }
+    .header-pc-menu-wrap .header-logo-nav #nav ul li:first-child{
+        display: block;
+        font-size: 2rem;
+    }
+    .header-pc-menu-wrap .header-logo-nav .header-mobile-btn{
+        display: block;
+        font-size: 2rem;
+    }
+}

@@ -1,0 +1,23 @@
+.menu{
+    display: flex;
+    margin: 100px;
+    list-style: none;
+}
+.menu>li{
+    width: auto;
+    text-align: center;
+    display:flex;
+    align-items: center;
+    margin-right: 10px;
+}
+.menu>li>.menu_img{
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    margin-right: 10px;
+}
+.menu>li>.text_img{}
+.menu>li>.text_img>.off{}
+.menu>li>.text_img>.on{
+    display: none;
+}

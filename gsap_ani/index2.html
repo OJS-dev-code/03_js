@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToggleBorder</title>
+    <link rel="stylesheet" href="./css/style2.css">
+    <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://assets.codepen.io/16327/SplitText3-beta.min.js?b=26"></script>
+</head>
+<body>
+    <nav>
+      <button class="charButton">Toggle Character Borders</button><button class="wordButton">Toggle Word Borders</button><button class="lineButton">Toggle Line Borders</button>
+    </nav>
+
+    <div class="container">
+      <h2 class="split">The text in this paragraph is split by words and lines. Lines can be tricky to manage responsively. In this demo we are solving this with autoSplit:true and onSplit. autoSplit is used to Split the text automatically when the text element resizes. We are then using the onSplit callback to revert the old animation, then on the new Split, creating a new animation with the progress preserved.
+        So this is all you need to have a responsive line animation that resplits on resize.</h2>
+    </div>
+    <script src="./js/script2.js"></script>
+</body>
+</html>
