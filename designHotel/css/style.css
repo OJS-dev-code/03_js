@@ -3,6 +3,12 @@ body {
     background: #222; 
     color: #fff;
 }
+.ir_so {
+    position: absolute;
+    font-size: 0;
+    text-indent: -99999em;
+    overflow: hidden;
+}
 a {color: #fff; text-decoration: none;}
 #wrap {width: 100%; height: 100%;}
 #header {
@@ -10,14 +16,88 @@ a {color: #fff; text-decoration: none;}
     position: fixed;
     left: 0;
     top: 0;
-    background: gray;
+    z-index: 9999;
+}
+
+.mobile-menu{
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    background: #333;
+    z-index: 99;
+    padding :3rem;
+    box-sizing: border-box;
+}
+.mobile-menu-bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 7rem;
+}
+.mobile-menu-bar .menu-logoBt-wrap img{
+    width: 5rem;
+}
+.mobile-menu-bar .menu-appBar-wrap a{
+    display: block;
+    font-size: 3rem;
+}
+
+.mobile-menu-list ul li{
+    height: 5rem;
+    border-bottom: 1px solid #ddd;
+    line-height: 5rem;
+}
+.mobile-menu-list ul li a{
+    font-size: 1.8rem;
+}
+.mobile-menu-list ul li a:hover{
+    color: rgba(255, 255, 255, .6);
+}
+
+.mobile-menu-footer{
+    margin: 3rem 0;
+}
+.mobile-menu-footer p{
+    font-size: 2rem;
+    line-height: 1.8;
+}
+
+.mobile-menu-footer-button{
+    display: flex;
+    justify-content: center;
+}
+.mobile-menu-footer-button button{
+    margin: 0 2rem;
+}
+.mobile-menu-footer-sns{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10rem;
+}
+.mobile-menu-footer-sns span{
+    display: block;
+    margin-right: 2rem;
+    width: 5rem; height: 5rem;
+    background: #525050;
+    border-radius: 50%;
+}
+.mobile-menu-footer-sns span a{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.mobile-menu-footer-sns span a i{
+    font-size: 2.5rem;
 }
 
 .header-pc-menu-wrap{
     width: 100%;
     max-width: 1090px; /*최대 width 되기 전까지는 1090*/
     margin: 0 auto;
-    background: skyblue;
 }
 .header-pc-menu-wrap aside{
     margin-bottom: 1rem;
@@ -49,7 +129,10 @@ a {color: #fff; text-decoration: none;}
     justify-content: space-between;
 }
 
-.header-pc-menu-wrap .header-logo-nav .header-mobile-btn{display: none;}
+.header-pc-menu-wrap .header-logo-nav .header-mobile-btn{
+    display: none;
+    cursor: pointer;
+}
 
 .header-pc-menu-wrap .header-logo-nav #nav ul{
     display: flex;
@@ -64,12 +147,220 @@ a {color: #fff; text-decoration: none;}
     color: rgba(255, 255, 255, .5);
 }
 
+
+.section1{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+.m-video{width: 100%;}
+.m-video video{width: 100%;}
+
+.m-again{
+    position: absolute;
+    z-index: 3;
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .6);
+    text-align: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    display: none;
+}
+.m-again h3{
+    display: flex;
+    height: 20rem;
+    justify-content: center;
+    align-items: center;
+}
+.m-again h3>a{font-size: 5rem; color: #222;}
+
+.m-next-section{
+    position: absolute;
+    bottom: 20%;
+    z-index: 3;
+    text-align: center;
+    width: 100%;
+}
+.m-next-section span a{font-size: 1.3rem;}
+
+.m-icon-footer{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 3;
+    background: rgba(49, 49, 49, .6);
+    height: 6rem;
+    padding: 0 8rem;
+    box-sizing: border-box;
+}
+.m-icon-footer .icon-footer-center ul{border-right: none;}
+.m-icon-footer .icon-footer-center ul li{border-left: none;}
+.m-icon-footer ul{display: flex; border-right:1px solid #fff;}
+.m-icon-footer ul li{
+    width: 6rem;
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-left: 1px solid #fff;
+}
+.m-icon-footer ul li span a{font-size: 2rem;}
+
+
+
+.section2{
+    width: 100%;
+    background-image: linear-gradient(to right, #384144, #384144 50%, #727b22 50%);
+}
+.section2 ul{
+    display:  flex;
+}
+.section2 ul li{
+    width: 50%;
+}
+.section2 ul li>div{
+    padding: 7rem 8rem;
+}
+.section2 ul li>div .section2-title{
+    margin-bottom: 3rem;
+    font-size: 1.8rem;
+    text-decoration: underline;
+}
+.section2 ul li>div .section2-content{
+    font-size: 1.5rem;
+    line-height: 1.8;
+}
+
+
+.section3{
+    width: 100%;
+    padding: 10rem 0;
+    background: #fff;
+    position: relative;
+    overflow: hidden;
+}
+.section3>div{
+    width: 100%;
+}
+.section3>div h2{
+    text-align: center;
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 5rem;
+}
+
+.section3>div .tranding-wrap{
+    width: 100%;
+    height: 362px;
+    position: relative;
+}
+.section3>div .tranding-wrap>ul{
+    display: flex;
+    width: cacl(290px*12);
+    flex-flow: row nowrap;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.section3>div .tranding-wrap>ul>li{
+    width: 29rem;
+    height: 100%;
+}
+.section3>div .tranding-wrap>ul>li>img{
+    width: 100%;
+}
+
+
+.section4{}
+.page-tab .container{
+    height: 5rem;
+    background: #2c3437;
+    width: 100%;
+}
+.filter-form{
+    display: flex;
+    justify-content: center;
+}
+.filter-form .form-item input{display: none;}
+.filter-form .form-item input:checked ~ label{
+    background: rgb(98, 3, 69);
+    color: rgb(255, 255, 255);
+}
+.filter-form .form-item label{
+    padding: 1.7rem 3rem;
+    color: rgba(255, 255, 255, .8);
+    font-size: 1.6rem;
+    display: inline-block;
+}
+
+.gallery{}
+.gallery .gallery-wrap{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.gallery .gallery-wrap li{
+    width: 33.333%;
+    overflow: hidden;
+    position: relative;
+}
+.gallery .gallery-wrap li:hover video{
+    transform: scale(1.2);
+}
+.gallery .gallery-wrap li>div{
+    width: 100%;
+}
+.gallery .gallery-wrap li>div .galleryBt{}
+.g-video{width: 100%;}
+.g-video video{
+    width: 100%;
+    transition: .3s;
+}
+.g-video .g-bg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+    z-index: 2;
+    top: 0;left: 0;
+    display: block;
+    transition: .3s;
+}
+.g-video .g-bg:hover{
+    background: rgba(0, 0, 0, .5);
+}
+.g-video .g-title{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 3;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: .3s;
+    display: block;
+}
+.g-video:hover .g-title{
+    opacity: 1;
+}
+.g-video .g-title .exploreBt{}
+
+
+
+
+
+
 @media screen and (max-width:1100px){
     .header-pc-menu-wrap{
         width: 100%;
         padding: 1rem 2rem;
         box-sizing: border-box;
-        background: rgb(138, 235, 135);
+        background: rgba(0, 0, 0, .6);
     }
     .header-pc-menu-wrap aside{
         display: none;
@@ -84,5 +375,15 @@ a {color: #fff; text-decoration: none;}
     .header-pc-menu-wrap .header-logo-nav .header-mobile-btn{
         display: block;
         font-size: 2rem;
+    }
+
+    .section2{
+        background: linear-gradient(to bottom,#384144, #384144 50%, #727b22 50% );
+    }
+    .section2 ul{
+        flex-direction: column;
+    }
+    .section2 ul li{
+        width: 100%;
     }
 }
