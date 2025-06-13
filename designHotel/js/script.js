@@ -1,5 +1,6 @@
 $(function(){
-    //1190px 이하가 되었을 때 메뉴버튼 클릭하면 뜬다. 
+    
+    //1190px 이하가 되었을 때 헤더의 메뉴버튼 클릭하면 뜨게하는 기능
     const appBtn = $('.header-mobile-btn');
     const mMenu= $('.mobile-menu');
 
@@ -37,6 +38,17 @@ $(function(){
         if(moveX<0) moveX = 0;
         
         trandingWrap.style.left = (-moveX) + 'px';
+    });
+});
+
+document.addEventListener('DOMContentLoaded', ()=>{
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', ()=>{
+        if(window.scrollY>700){
+            header.classList.add('scrolled');
+        }else{
+            header.classList.remove('scrolled');
+        }
     });
 });
 

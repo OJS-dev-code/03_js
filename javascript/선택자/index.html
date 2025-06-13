@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>자바스크립트 선택자</title>
+</head>
+<body>
+   <h1 id="title">
+      javascript 선택자
+   </h1>
+   <div class="container">
+      <h3>list1</h3>
+      <ul id="list1" class="list">
+         <li>li 1</li>
+         <li>li 2</li>
+         <li>li 3</li>
+         <li>li 4</li>
+         <li>li 5</li>
+      </ul>
+   </div>
+   <div class="container">
+      <h3>list2</h3>
+      <ul id="list2" class="list">
+         <li>li 1</li>
+         <li>li 2</li>
+         <li>li 3</li>
+         <li>li 4</li>
+         <li>li 5</li>
+      </ul>
+   </div>
+   <div class="container">
+      <h3>list3</h3>
+      <ul id="list3" class="list">
+         <li class="red">li 1</li>
+         <li>li 2</li>
+         <li>li 3</li>
+         <li>li 4</li>
+         <li id="list3-5">li 5</li>
+         <li>li 5</li>
+      </ul>
+   </div>
+   <div class="container">
+      <h3>box level 비교</h3>
+      <div id="box">
+         box level1
+         <div>
+            box level2
+            <div>
+               box level3
+            </div>
+         </div>
+      </div>
+   </div>
+   <h3>p 태그</h3>
+   <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto illo incidunt repudiandae veritatis vel magni, atque non quis libero maiores impedit ea, accusantium aliquam perspiciatis modi ipsa! Voluptates, omnis quasi?</p>
+   <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto illo incidunt repudiandae veritatis vel magni, atque non quis libero maiores impedit ea, accusantium aliquam perspiciatis modi ipsa! Voluptates, omnis quasi?</p>
+   <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto illo incidunt repudiandae veritatis vel magni, atque non quis libero maiores impedit ea, accusantium aliquam perspiciatis modi ipsa! Voluptates, omnis quasi?</p>
+
+   <script>
+      //document == 연동된 html 문서 
+      const firstTitle = document.getElementById('title');
+      const myList = document.getElementsByClassName('list'); 
+      const myList1 = document.querySelector('.list');
+      const myList2 = document.querySelector('.list .red');
+      const para = document.getElementsByTagName('p');
+
+      firstTitle.style.color ='red'; //여러번 사용한다면 변수로 만들어서 쓰는게 속도가 더 빠르다.
+      myList[2].style.color = 'pink'; //myList는 array 이므로 인덱스 지정해야 변경됨
+      myList1.style.color='red'; //querySelector는 선택자 뭉치 중에서 첫번째만 반환 
+      for(let i=0; i<para.length; i++){
+         para[i].style.background='green';
+      }
+      myList2.style.color='red';
+
+   </script>
+</body>
+</html>

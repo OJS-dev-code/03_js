@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>openweather api</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.10/css/weather-icons.min.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <!-- 찾고 싶은 도시를 openweather 사이트에서 찾기 -> https://openweathermap.org/city/도시id 에서 id 가져오기 -->
+    <!-- seoul 1835848 [37.5683, 126.9778]-->
+    <!-- api key 8e6b52903bb92cce925210c60a8b12e7 --> 
+    <!-- https://api.openweathermap.org/data/2.5/weather?id=1835848&appid=8e6b52903bb92cce925210c60a8b12e7&units=metric -->
+    <h1>Weather api - Open Weather</h1>
+    <h2>날씨 API</h2>
+    <!-- current temperature 온도정보 -->
+    <div class="ctemp">현재 온도 : </div>
+    <div class="clowtemp">최저 온도 : </div>
+    <div class="chightemp">최고 온도 : </div>
+    <div class="cicon">아이콘 : </div>
+
+    <!-- temp
+        : 
+        24.76
+        temp_max
+        : 
+        27.78
+        temp_min
+        : 
+        24.76 -->
+    <script>
+        
+        $.getJSON("https://api.openweathermap.org/data/2.5/weather?id=1835848&appid=8e6b52903bb92cce925210c60a8b12e7&units=metric", function(data){
+            console.log(data);
+            // https://openweathermap.org/img/wn/${iconid}@2x.png
+            let $Temp = data.main.temp; 
+            let $LowTemp = data.main.temp_min;
+            let $HighTemp = data.main.temp_max;
+            //let $Icon = data.weather[0].icon;
+            let $Icon = data.weather[0].id;
+            console.log($Temp,$LowTemp,$HighTemp,$Icon);
+
+            // OpenWeatherMap 날씨 ID를 weather-icons 클래스에 매핑하는 함수
+            function getWeatherIconClass(id) {
+                if (id >= 200 && id < 300) return "wi-thunderstorm";
+                if (id >= 300 && id < 500) return "wi-sprinkle";
+                if (id >= 500 && id < 600) return "wi-rain";
+                if (id >= 600 && id < 700) return "wi-snow";
+                if (id >= 700 && id < 800) return "wi-fog";
+                if (id === 800) return "wi-day-sunny";
+                if (id > 800 && id < 900) return "wi-cloudy";
+                return "wi-na";
+            }
+            let iconClass = getWeatherIconClass($Icon);
+
+            $('.ctemp').append($Temp);
+            $('.clowtemp').append($LowTemp);
+            $('.chightemp').append($HighTemp);
+            //$('.cicon').append('<img src="https://openweathermap.org/img/wn/'+$Icon+'@2x.png"/>');
+            $('.cicon').append('<i class="wi ' + iconClass + '"></i>');
+        })
+    </script>
+</body>
+</html>

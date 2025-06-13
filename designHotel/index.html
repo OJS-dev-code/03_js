@@ -35,6 +35,7 @@
 <!-- 로컬 js -->
 <script src='./js/script.js' defer></script>
 <script src='./js/video.js' defer></script>
+<script src='./js/data.js' defer></script>
 
 </head>
 <body>
@@ -193,26 +194,27 @@
                             <form action="#" id="gallery-filter" class="filter-form">
                                 <span class="form-item">
                                     <input type="radio" name="filter" id="filter-all" value="all" checked>
-                                    <label for="fillter-all">ALL</label>
+                                    <label for="filter-all">ALL</label>
                                 </span>
                                 <span class="form-item">
                                     <input type="radio" name="filter" id="filter-beach" value="beach">
-                                    <label for="fillter-beach">BEACH</label>
+                                    <label for="filter-beach">BEACH</label>
                                 </span>
                                 <span class="form-item">
                                     <input type="radio" name="filter" id="filter-city" value="city">
-                                    <label for="fillter-city">CITY</label>
+                                    <label for="filter-city">CITY</label>
                                 </span>
                                 <span class="form-item">
                                     <input type="radio" name="filter" id="filter-mountain" value="mountain">
-                                    <label for="fillter-mountain">MOUNTAIN</label>
+                                    <label for="filter-mountain">MOUNTAIN</label>
                                 </span>
                             </form>
                         </div>
                     </div>
                     <div class="gallery">
                         <ul class="gallery-wrap">
-                            <li>
+                            <!-- data.js를 통해서  -->
+                            <!-- <li>
                                 <div>
                                     <a href="#" class="galleryBt">
                                         <span class="g-video">
@@ -226,37 +228,7 @@
                                         </span>
                                     </a>
                                 </div>
-                            </li>
-                            <li>
-                                <div>
-                                    <a href="#" class="galleryBt">
-                                        <span class="g-video">
-                                            <video src="./video/galleryVideo01.mp4" autoplay muted></video>
-                                            <div class="g-bg"></div>
-                                            <div class="g-title">
-                                                <span><strong>The Ride</strong></span>
-                                                <span><b>Lorem</b></span>
-                                                <span><i class="exploreBt">exploreBt</i></span>
-                                            </div>
-                                        </span>
-                                    </a>
-                                </div>
-                            </li>
-                            <li>
-                                <div>
-                                    <a href="#" class="galleryBt">
-                                        <span class="g-video">
-                                            <video src="./video/galleryVideo01.mp4" autoplay muted></video>
-                                            <div class="g-bg"></div>
-                                            <div class="g-title">
-                                                <span><strong>The Ride</strong></span>
-                                                <span><b>Lorem</b></span>
-                                                <span><i class="exploreBt">exploreBt</i></span>
-                                            </div>
-                                        </span>
-                                    </a>
-                                </div>
-                            </li>
+                            </li> -->
                         </ul>
                         <div class="loadMore">
                             <button class="loadMoreBt">Load More</button>
@@ -266,7 +238,62 @@
             </section>
         </main>
         <footer id="footer">
-
+            <div class="container">
+                <div class="footer-wrap">
+                    <div class="copy-fMenu">
+                        <div class="copy">
+                            <a href="#" class="flogo">
+                                &copy; 2024 Design Hotels <sup>TM</sup>
+                            </a>
+                        </div>
+                        <div class="fMenu">
+                            <ul>
+                                <li><a href="#">Contact</a></li>
+                                <li><a href="#">Cancel Booking</a></li>
+                            </ul>
+                            <ul>
+                                <li><a href="#">Contact</a></li>
+                                <li><a href="#">Cancel Booking</a></li>
+                                <li><a href="#">Contact</a></li>
+                                <li><a href="#">Cancel Booking</a></li>
+                            </ul>
+                            <ul>
+                                <li><a href="#">Contact</a></li>
+                                <li><a href="#">Cancel Booking</a></li>
+                                <li><a href="#">Contact</a></li>
+                                <li><a href="#">Cancel Booking</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="sns-wrap">
+                        <div>
+                                <ul>
+                                    <li class="instagram"><a href="#">Instagram</a></li>
+                                    <li class="instagram"><a href="#">Instagram</a></li>
+                                    <li class="instagram"><a href="#">Instagram</a></li>
+                                    <li class="instagram"><a href="#">Instagram</a></li>
+                                    <li class="instagram"><a href="#">Instagram</a></li>
+                                </ul>
+                        </div>
+                        <div>
+                            <div class="footer-currency">
+                                <span>Currency</span>
+                                <a href="javascript:"></a>
+                                <div class="currencies currencies1">
+                                    <div>
+                                        <ul>
+                                            <li><a href="#">AED</a></li>
+                                            <li><a href="#">ALL</a></li>
+                                            <li><a href="#">AUD</a></li>
+                                            <li><a href="#">BTD</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </footer>
     </div>
 </body>
