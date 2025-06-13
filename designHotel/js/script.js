@@ -40,7 +40,7 @@ $(function(){
         trandingWrap.style.left = (-moveX) + 'px';
     });
 });
-
+//header가 section1 아래로 이동하면 header에 불투명한 검정색 배경이 추가됨
 document.addEventListener('DOMContentLoaded', ()=>{
     const header = document.getElementById('header');
     window.addEventListener('scroll', ()=>{
