@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조상요소찾기</title>
+    <script src="../jquery/js/jquery-3.7.1.js"></script>
+</head>
+<body>
+    <div class="container">div (고고조부모)
+   <div>div (고조부모)
+      <ul>ul (조부모)
+         <div>div (부모)
+           <li class="me">li (자식)
+          	 <span>span (손자)</span>
+      	   </li>
+        </div>
+      </ul>
+   </div>
+</div>
+
+<script>
+// <ul> 요소의 부모 요소를 선택하여, 해당 요소의 CSS 스타일을 변경한다.
+$("ul").parent().css({"border": "2px solid pink"});
+
+// <ul> 요소의 모든 조상 요소를 선택하여, 
+$("ul").parents().css({"border": "2px solid blue"});
+
+// <ul>요소의 상위 요소 중에서 <div>요소를 모두 선택하여, 
+$("ul").parents("div").css({"border": "2px solid green"});
+
+// <li>요소의 상위 요소 중에서 첫 번째 <div>요소의 바로 이전까지의 요소를 모두 선택하여,
+$("li").parentsUntil("div").css({"border": "2px solid black"});
+// 클래스 "me"을 가진 요소 자신과, 나의 상위 요소 3개의 <div> 중에서 가까운 div를 골라, 
+$(".me").closest("div").css({"border": "2px solid grey"});
+
+// 클래스 "me"을 가진 요소 자신과, 나의 상위 요소 중에서 첫 번째 <li>요소를 선택하여, 
+$(".me").closest("li").css({"border": "2px solid red"}); // 결국 나 자신을 선택
+</script>
+</body>
+</html>
