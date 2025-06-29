@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>정규표현식 회원가입 </title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/script.js" defer></script>
+</head>
+<body>
+    <div id="reqex">
+        <h2>회원가입</h2>
+        <fieldset>
+            <legend class="ir_so">회원가입</legend>
+            <form action="#" id="signUp" name="signUp" method="post">
+                <ul>
+                    <li>
+                        <label for="idArea">아이디</label>
+                        <span class="message" id="idMes"></span>
+                        <input type="text" id="idArea" placeholder="아이디를 입력해주세요">
+                    </li>
+                    <li>
+                        <label for="pwArea">비밀번호</label>
+                        <span class="message" id="pwMes"></span>
+                        <input type="password" id="pwArea" placeholder="비밀번호를 입력해주세요">
+                    </li>
+                    <li>
+                        <label for="pwArea1">비밀번호 확인</label>
+                        <span class="message" id="pwMes1"></span>
+                        <input type="password" id="pwArea1" placeholder="비밀번호를 다시 입력해주세요">
+                    </li>
+                    <li>
+                        <label for="nameArea">이름</label>
+                        <span class="message" id="nameMes"></span>
+                        <input type="text" id="nameArea" placeholder="이름을 입력해주세요">
+                    </li>
+                    <li>
+                        <label for="phoneArea">전화번호</label>
+                        <span class="message" id="phoneMes"></span>
+                        <input type="text" id="phoneArea" placeholder="휴대전화번호를 입력해주세요">
+                    </li>
+                    <li>
+                        <label for="emailArea">e-mail</label>
+                        <span class="message" id="emailMes"></span>
+                        <input type="text" id="emailArea" placeholder="이메일을 입력해주세요">
+                    </li>
+                    <li>
+                        <label for="birthArea">생년월일</label>
+                        <span class="message" id="birthMes"></span>
+                        <input type="text" id="birthArea" placeholder="생년월일 8자리를 입력해주세요">
+                    </li>
+                </ul>
+                <button id="submit">회원가입</button>
+            </form>
+        </fieldset>
+    </div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+body{
+    background: #999;
+}
+#reqex h2{
+    text-align: center;
+    border-bottom: 5px double #333;
+}
+#reqex fieldset{border: none; width: 800px; margin: 0 auto;}
+#reqex fieldset legend{display: none;}
+
+#signUp{}
+#signUp ul{
+    padding: 0;
+    list-style: none;
+}
+#signUp ul li{
+    position: relative;
+    border-bottom: 1px solid #ddd;
+    height: 70px;
+}
+#signUp ul li label{
+    display: block;
+    padding-top: 5px;
+}
+#signUp ul li span{
+    position: absolute;
+    top: 5px;
+    left: 100px;
+    font-size: 12px;
+    color: rgb(131, 77, 77);
+}
+#signUp ul li input{
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    background: #999;
+}
+#signUp ul li input:focus{
+    outline: none;
+}
+
+#submit{
+    width: 100%;
+    color: #fff;
+    background:skyblue;
+    box-sizing: border-box;
+    padding: 10px 0;
+    border:none;
+}

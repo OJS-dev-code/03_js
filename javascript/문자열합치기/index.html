@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setInterval</title>
+</head>
+<body>
+    <h2>문자열</h2>
+    <script>
+        console.log('문자열');
+        //상수 const
+        //var 정의할 때 값을 대입해야 함(선언과 정의 동시) 
+        //let 선언만 해도 OK
+        let str = 'hello world';
+        let str1 = 'javascript'
+        //indexOf -> str 중에 ''에 들어간 걸 가지고 있니?
+        let str2 = str.indexOf('world');
+        console.log(str2); //6반환 (0->h, 6->h)
+        str2 = str.indexOf('c')
+        console.log(str2) //-1 반환(없는 글자)
+        //concat() 합치기
+        let newStr = str.concat(str1)
+        console.log(newStr) //hello worldjavascript
+    </script>
+    <h2>타이머</h2>
+    <script>
+        //setTimeout(할일, 시간)
+        //setTimeout(function(){}, 3000)
+        //3초 후에 function 실행 -> 1번만 실행하고 끝
+        let timer = setTimeout(function(){
+            alert('졸려');
+        },3000)
+        clearTimeout(timer)
+        //setInterval(할일, 시간)
+        //setInterval(function(){},3000)
+        //3초마다 function 실행
+        let timer1 = setInterval(function(){
+            alert('졸려?')
+        },3000)
+        clearInterval(timer1)
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>math</title>
+</head>
+<body>
+    <h2>math 기본</h2>
+    <script>
+        let num = 2.3651
+        let maxNum = Math.max(10, 5, 2,7,16);
+        console.log(maxNum) //16
+        let minNum = Math.min(10, 5, 3,7,16);
+        console.log(minNum) //3
+
+        //random
+        let roundNum = Math.round(num); // 소수 첫번째 자리에서 반올림해서 놓음
+        console.log(roundNum); //2
+        let floorNum = Math.floor(num);//소수 첫번째 자리를 자름
+        console.log(floorNum); //2
+        let ceilNum = Math.ceil(num) //무조건 소수 첫번째 자리 올림
+        console.log(ceilNum); //3
+        let randomNum = Math.random(num) //0과 1사이의 값 무작위로 지정
+        console.log(randomNum);
+    </script>
+    <h2>random</h2>
+    <script>
+        let rn = Math.floor(Math.random())
+        console.log(rn); //0
+        rn = Math.floor(Math.random()*11);
+        console.log(rn); //1~10 랜덤 
+        rn = Math.floor(Math.random()*31)+120;
+        console.log(rn); //120~150 난수 
+    </script>
+</body>
+</html>
